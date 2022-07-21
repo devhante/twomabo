@@ -1,0 +1,26 @@
+.Character {
+    display: flex;
+    margin: 16px;
+}
+
+.Character > .character-image {
+    width: 80px;
+    height: 80px;
+}
+
+.Character > .character-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Character > .character-info > .character-element {
+    width: 20px;
+    height: 20px;
+}
+
+.Character > .character-info > .character-star {
+    width: 80px;
+    height: 20px;
+}

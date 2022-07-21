@@ -1,0 +1,11 @@
+.Needs {
+    display: flex;
+    margin: 5px;
+}
+
+.Needs > .needs-title {
+    padding: 0px 4px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 20px;
+}

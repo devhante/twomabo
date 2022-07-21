@@ -1,0 +1,16 @@
+.Need {
+    display: flex;
+    margin: 8px;
+}
+
+.Need > .need-image {
+    width: 40px;
+    height: 40px;
+}
+
+.Need > .need-count {
+    padding: 0px 4px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
