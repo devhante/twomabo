@@ -1,0 +1,7 @@
+.Mabo {
+    margin: 20px;
+}
+
+.Mabo > .Mabo-abilities {
+    display: flex;
+}

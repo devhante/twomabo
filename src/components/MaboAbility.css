@@ -1,0 +1,13 @@
+.MaboAbility {
+    margin: 4px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.MaboAbility.need {
+    background-color:pink;
+}
+
+.MaboAbility.acquired {
+    background-color: aquamarine;
+}

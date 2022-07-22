@@ -1,6 +1,11 @@
 .Character {
     display: flex;
     margin: 16px;
+    cursor: pointer;
+}
+
+.Character.selected {
+    background-color: skyblue;
 }
 
 .Character > .character-image {
