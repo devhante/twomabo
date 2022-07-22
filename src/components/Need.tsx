@@ -11,7 +11,7 @@ export default function Need(props: IProps) {
     <div className="Need">
       <img
         className="need-image"
-        src={`/items/${props.item}.png`}
+        src={`items/${props.item}.png`}
         alt={props.item}
       />
       <div className="need-count">{props.count}</div>

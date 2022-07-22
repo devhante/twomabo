@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/twomabo/static/css/main.f96e60fd.css",
-    "main.js": "/twomabo/static/js/main.aae028f8.js",
+    "main.js": "/twomabo/static/js/main.9f766f74.js",
     "static/js/787.5f831a82.chunk.js": "/twomabo/static/js/787.5f831a82.chunk.js",
     "index.html": "/twomabo/index.html",
     "main.f96e60fd.css.map": "/twomabo/static/css/main.f96e60fd.css.map",
-    "main.aae028f8.js.map": "/twomabo/static/js/main.aae028f8.js.map",
+    "main.9f766f74.js.map": "/twomabo/static/js/main.9f766f74.js.map",
     "787.5f831a82.chunk.js.map": "/twomabo/static/js/787.5f831a82.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f96e60fd.css",
-    "static/js/main.aae028f8.js"
+    "static/js/main.9f766f74.js"
   ]
 }

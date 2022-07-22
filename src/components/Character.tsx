@@ -36,9 +36,9 @@ export default function Character(props: IProps) {
       <div className="character-info">
         <img
           className="character-element"
-          src={`/others/elemental-${props.element}.png`}
+          src={`others/elemental-${props.element}.png`}
         />
-        <img className="character-star" src={`/others/star${props.star}.png`} />
+        <img className="character-star" src={`others/star${props.star}.png`} />
         <div className="character-name">{props.name_ko}</div>
       </div>
     </div>
