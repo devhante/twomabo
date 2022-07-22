@@ -31,14 +31,17 @@ export default function Character(props: IProps) {
     >
       <img
         className="character-image"
-        src={`characters/${props.name_en}.png`}
+        src={`${process.env.PUBLIC_URL}/characters/${props.name_en}.png`}
       />
       <div className="character-info">
         <img
           className="character-element"
-          src={`others/elemental-${props.element}.png`}
+          src={`${process.env.PUBLIC_URL}/others/elemental-${props.element}.png`}
         />
-        <img className="character-star" src={`others/star${props.star}.png`} />
+        <img
+          className="character-star"
+          src={`${process.env.PUBLIC_URL}/others/star${props.star}.png`}
+        />
         <div className="character-name">{props.name_ko}</div>
       </div>
     </div>
