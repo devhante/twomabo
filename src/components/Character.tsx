@@ -1,25 +1,22 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { maboState, select } from "../slices/maboSlice";
-import { charName } from "../type";
+import { character, charName, element } from "../type";
 import "./Character.css";
 
 interface IProps {
-  element: string;
-  star: number;
-  name_en: charName;
-  name_ko: string;
+  character: character;
 }
 
 export default function Character(props: IProps) {
   const maboState: maboState = useSelector((state: any) => state.mabo);
   const dispatch = useDispatch();
-  const selected = props.name_en === maboState.selectedChar;
+  const selected = props.character.name_en === maboState.selectedChar;
 
   function handleClickCharacter() {
     dispatch(
       select({
-        name: props.name_en,
+        name: props.character.name_en,
       })
     );
   }
@@ -31,18 +28,18 @@ export default function Character(props: IProps) {
     >
       <img
         className="character-image"
-        src={`${process.env.PUBLIC_URL}/characters/${props.name_en}.png`}
+        src={`${process.env.PUBLIC_URL}/characters/${props.character.name_en}.png`}
       />
       <div className="character-info">
         <img
           className="character-element"
-          src={`${process.env.PUBLIC_URL}/others/elemental-${props.element}.png`}
+          src={`${process.env.PUBLIC_URL}/others/element_${props.character.element}.png`}
         />
         <img
           className="character-star"
-          src={`${process.env.PUBLIC_URL}/others/star${props.star}.png`}
+          src={`${process.env.PUBLIC_URL}/others/star_${props.character.star}.png`}
         />
-        <div className="character-name">{props.name_ko}</div>
+        <div className="character-name">{props.character.name_ko}</div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { maboState } from "../slices/maboSlice";
-import { itemName } from "../type";
+import { element, itemName } from "../type";
 import Need from "./Need";
 import "./Needs.css";
 
@@ -16,135 +16,130 @@ export default function Needs() {
     ether_fire_1: 0,
     ether_fire_2: 0,
     ether_fire_3: 0,
+    element_water_3: 0,
+    element_water_4: 0,
+    ether_water_1: 0,
+    ether_water_2: 0,
+    ether_water_3: 0,
+    element_thunder_3: 0,
+    element_thunder_4: 0,
+    ether_thunder_1: 0,
+    ether_thunder_2: 0,
+    ether_thunder_3: 0,
+    element_wind_3: 0,
+    element_wind_4: 0,
+    ether_wind_1: 0,
+    ether_wind_2: 0,
+    ether_wind_3: 0,
+    element_light_3: 0,
+    element_light_4: 0,
+    ether_light_1: 0,
+    ether_light_2: 0,
+    ether_light_3: 0,
+    element_dark_3: 0,
+    element_dark_4: 0,
+    ether_dark_1: 0,
+    ether_dark_2: 0,
+    ether_dark_3: 0,
   };
+
+  function addCount(
+    element: element,
+    mana: number,
+    dreamCoatOfArms: number,
+    element3: number,
+    element4: number,
+    ether1: number,
+    ether2: number,
+    ether3: number
+  ): void {
+    itemCount.mana += mana;
+    itemCount.dream_coat_of_arms += dreamCoatOfArms;
+    switch (element) {
+      case "fire":
+        itemCount.element_fire_3 += element3;
+        itemCount.element_fire_4 += element4;
+        itemCount.ether_fire_1 += ether1;
+        itemCount.ether_fire_2 += ether2;
+        itemCount.ether_fire_3 += ether3;
+        break;
+      case "water":
+        itemCount.element_water_3 += element3;
+        itemCount.element_water_4 += element4;
+        itemCount.ether_water_1 += ether1;
+        itemCount.ether_water_2 += ether2;
+        itemCount.ether_water_3 += ether3;
+        break;
+      case "thunder":
+        itemCount.element_thunder_3 += element3;
+        itemCount.element_thunder_4 += element4;
+        itemCount.ether_thunder_1 += ether1;
+        itemCount.ether_thunder_2 += ether2;
+        itemCount.ether_thunder_3 += ether3;
+        break;
+      case "wind":
+        itemCount.element_wind_3 += element3;
+        itemCount.element_wind_4 += element4;
+        itemCount.ether_wind_1 += ether1;
+        itemCount.ether_wind_2 += ether2;
+        itemCount.ether_wind_3 += ether3;
+        break;
+      case "light":
+        itemCount.element_light_3 += element3;
+        itemCount.element_light_4 += element4;
+        itemCount.ether_light_1 += ether1;
+        itemCount.ether_light_2 += ether2;
+        itemCount.ether_light_3 += ether3;
+        break;
+      case "dark":
+        itemCount.element_dark_3 += element3;
+        itemCount.element_dark_4 += element4;
+        itemCount.ether_dark_1 += ether1;
+        itemCount.ether_dark_2 += ether2;
+        itemCount.ether_dark_3 += ether3;
+        break;
+    }
+  }
 
   for (const mabo of maboState.maboList) {
     for (const ability of mabo.abilities) {
       if (ability.status === "need") {
         if (ability.number === 4 && ability.upgrade === 0) {
-          itemCount.mana += 4500;
-          itemCount.dream_coat_of_arms += 3;
-          itemCount.element_fire_3 += 10;
-          itemCount.element_fire_4 += 8;
-          itemCount.ether_fire_1 += 10;
+          addCount(mabo.element, 4500, 3, 10, 8, 10, 0, 0);
         } else if (ability.number === 4 && ability.upgrade === 1) {
-          itemCount.mana += 5050;
-          itemCount.dream_coat_of_arms += 3;
-          itemCount.element_fire_3 += 12;
-          itemCount.element_fire_4 += 10;
-          itemCount.ether_fire_1 += 12;
+          addCount(mabo.element, 5050, 3, 12, 10, 12, 0, 0);
         } else if (ability.number === 4 && ability.upgrade === 2) {
-          itemCount.mana += 5600;
-          itemCount.dream_coat_of_arms += 5;
-          itemCount.element_fire_3 += 18;
-          itemCount.element_fire_4 += 12;
-          itemCount.ether_fire_1 += 12;
-          itemCount.ether_fire_2 += 2;
+          addCount(mabo.element, 5600, 5, 18, 12, 12, 2, 0);
         } else if (ability.number === 4 && ability.upgrade === 3) {
-          itemCount.mana += 6240;
-          itemCount.dream_coat_of_arms += 5;
-          itemCount.element_fire_4 += 14;
-          itemCount.ether_fire_1 += 14;
-          itemCount.ether_fire_2 += 4;
-          itemCount.ether_fire_3 += 1;
+          addCount(mabo.element, 6240, 5, 0, 14, 14, 4, 1);
         } else if (ability.number === 4 && ability.upgrade === 4) {
-          itemCount.mana += 8360;
-          itemCount.dream_coat_of_arms += 8;
-          itemCount.element_fire_4 += 16;
-          itemCount.ether_fire_1 += 16;
-          itemCount.ether_fire_2 += 6;
-          itemCount.ether_fire_3 += 2;
+          addCount(mabo.element, 8360, 8, 0, 16, 16, 6, 2);
         } else if (ability.number === 4 && ability.upgrade === 5) {
-          itemCount.mana += 10200;
-          itemCount.dream_coat_of_arms += 8;
-          itemCount.element_fire_4 += 20;
-          itemCount.ether_fire_1 += 20;
-          itemCount.ether_fire_2 += 10;
-          itemCount.ether_fire_3 += 4;
+          addCount(mabo.element, 10200, 8, 0, 20, 20, 10, 4);
         } else if (ability.number === 5 && ability.upgrade === 0) {
-          itemCount.mana += 5100;
-          itemCount.dream_coat_of_arms += 3;
-          itemCount.element_fire_3 += 16;
-          itemCount.element_fire_4 += 8;
-          itemCount.ether_fire_1 += 12;
-          itemCount.ether_fire_2 += 4;
+          addCount(mabo.element, 5100, 3, 16, 8, 12, 4, 0);
         } else if (ability.number === 5 && ability.upgrade === 1) {
-          itemCount.mana += 5900;
-          itemCount.dream_coat_of_arms += 5;
-          itemCount.element_fire_3 += 20;
-          itemCount.element_fire_4 += 10;
-          itemCount.ether_fire_1 += 12;
-          itemCount.ether_fire_2 += 5;
+          addCount(mabo.element, 5900, 5, 20, 10, 12, 5, 0);
         } else if (ability.number === 5 && ability.upgrade === 2) {
-          itemCount.mana += 7420;
-          itemCount.dream_coat_of_arms += 5;
-          itemCount.element_fire_4 += 12;
-          itemCount.ether_fire_1 += 14;
-          itemCount.ether_fire_2 += 6;
-          itemCount.ether_fire_3 += 2;
+          addCount(mabo.element, 7420, 5, 0, 12, 14, 6, 2);
         } else if (ability.number === 5 && ability.upgrade === 3) {
-          itemCount.mana += 10000;
-          itemCount.dream_coat_of_arms += 8;
-          itemCount.element_fire_4 += 14;
-          itemCount.ether_fire_1 += 16;
-          itemCount.ether_fire_2 += 8;
-          itemCount.ether_fire_3 += 4;
+          addCount(mabo.element, 10000, 8, 0, 14, 16, 8, 4);
         } else if (ability.number === 5 && ability.upgrade === 4) {
-          itemCount.mana += 12700;
-          itemCount.dream_coat_of_arms += 8;
-          itemCount.element_fire_4 += 16;
-          itemCount.ether_fire_1 += 20;
-          itemCount.ether_fire_2 += 10;
-          itemCount.ether_fire_3 += 6;
+          addCount(mabo.element, 12700, 8, 0, 16, 20, 10, 6);
         } else if (ability.number === 5 && ability.upgrade === 5) {
-          itemCount.mana += 14100;
-          itemCount.dream_coat_of_arms += 10;
-          itemCount.element_fire_4 += 18;
-          itemCount.ether_fire_1 += 24;
-          itemCount.ether_fire_2 += 15;
-          itemCount.ether_fire_3 += 10;
+          addCount(mabo.element, 14100, 10, 0, 18, 24, 15, 10);
         } else if (ability.number === 6 && ability.upgrade === 0) {
-          itemCount.mana += 7300;
-          itemCount.dream_coat_of_arms += 5;
-          itemCount.element_fire_4 += 10;
-          itemCount.ether_fire_1 += 14;
-          itemCount.ether_fire_2 += 6;
-          itemCount.ether_fire_3 += 2;
+          addCount(mabo.element, 7300, 5, 0, 10, 14, 6, 2);
         } else if (ability.number === 6 && ability.upgrade === 1) {
-          itemCount.mana += 9980;
-          itemCount.dream_coat_of_arms += 5;
-          itemCount.element_fire_4 += 12;
-          itemCount.ether_fire_1 += 18;
-          itemCount.ether_fire_2 += 8;
-          itemCount.ether_fire_3 += 4;
+          addCount(mabo.element, 9980, 5, 0, 12, 18, 8, 4);
         } else if (ability.number === 6 && ability.upgrade === 2) {
-          itemCount.mana += 12250;
-          itemCount.dream_coat_of_arms += 8;
-          itemCount.element_fire_4 += 14;
-          itemCount.ether_fire_1 += 18;
-          itemCount.ether_fire_2 += 10;
-          itemCount.ether_fire_3 += 6;
+          addCount(mabo.element, 12250, 8, 0, 14, 18, 10, 6);
         } else if (ability.number === 6 && ability.upgrade === 3) {
-          itemCount.mana += 14600;
-          itemCount.dream_coat_of_arms += 8;
-          itemCount.element_fire_4 += 16;
-          itemCount.ether_fire_1 += 20;
-          itemCount.ether_fire_2 += 12;
-          itemCount.ether_fire_3 += 8;
+          addCount(mabo.element, 14600, 8, 0, 16, 20, 12, 8);
         } else if (ability.number === 6 && ability.upgrade === 4) {
-          itemCount.mana += 18300;
-          itemCount.dream_coat_of_arms += 10;
-          itemCount.element_fire_4 += 18;
-          itemCount.ether_fire_1 += 24;
-          itemCount.ether_fire_2 += 16;
-          itemCount.ether_fire_3 += 10;
+          addCount(mabo.element, 18300, 10, 0, 18, 24, 16, 10);
         } else if (ability.number === 6 && ability.upgrade === 5) {
-          itemCount.mana += 22400;
-          itemCount.dream_coat_of_arms += 10;
-          itemCount.element_fire_4 += 22;
-          itemCount.ether_fire_1 += 28;
-          itemCount.ether_fire_2 += 20;
-          itemCount.ether_fire_3 += 15;
+          addCount(mabo.element, 22400, 10, 0, 22, 28, 20, 15);
         }
       }
     }
@@ -154,9 +149,13 @@ export default function Needs() {
 
   const needs = (
     <>
-      {itemNames.map((item) => (
-        <Need item={item} count={itemCount[item]} key={item} />
-      ))}
+      {itemNames.map((item) =>
+        itemCount[item] > 0 ? (
+          <Need item={item} count={itemCount[item]} key={item} />
+        ) : (
+          <></>
+        )
+      )}
     </>
   );
 
