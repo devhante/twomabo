@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { characters } from "../data";
 import { abilityStatus, character, charName, mabo } from "../type";
 
 export type maboState = {
@@ -28,22 +29,8 @@ export type maboUpdatePayload = {
 };
 
 const getMaboList = (): mabo[] => {
-  const charList: charName[] = [
-    "Rolf",
-    "Marina",
-    "Clarisse",
-    "Bianca",
-    "Vyron",
-  ];
   let result: mabo[] = [];
   const data = localStorage.getItem("maboList");
-  const characters: character[] = [
-    { element: "fire", star: 5, name_en: "Rolf", name_ko: "롤프" },
-    { element: "fire", star: 5, name_en: "Marina", name_ko: "마리나" },
-    { element: "fire", star: 5, name_en: "Clarisse", name_ko: "클라리스" },
-    { element: "fire", star: 4, name_en: "Bianca", name_ko: "비앙카" },
-    { element: "dark", star: 5, name_en: "Vyron", name_ko: "베론" },
-  ];
   if (data) {
     result = JSON.parse(data);
   } else {
