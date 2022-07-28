@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useSelector } from "react-redux";
 import { maboState } from "../slices/maboSlice";
 import { element, itemName } from "../type";
@@ -153,7 +153,7 @@ export default function Needs() {
         itemCount[item] > 0 ? (
           <Need item={item} count={itemCount[item]} key={item} />
         ) : (
-          <></>
+          <Fragment key={item}></Fragment>
         )
       )}
     </>
