@@ -20,3 +20,21 @@ code {
   -ms-user-select: none;
   user-select: none;
 }
+
+@font-face {
+  font-family: 'MICEGothic';
+  src:url('./fonts/MICEGothic.eot');
+  src:url('fonts/MICEGothic.woff') format('woff'),
+  url('fonts/MICEGothic.woff2') format('woff2'),
+  url('fonts/MICEGothic.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'MICEGothic';
+  src:url('./fonts/MICEGothicBold.eot');
+  src:url('fonts/MICEGothicBold.woff') format('woff'),
+  url('fonts/MICEGothicBold.woff2') format('woff2'),
+  url('fonts/MICEGothicBold.ttf') format('truetype');
+  font-weight: bold;
+}

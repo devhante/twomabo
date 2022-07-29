@@ -12,7 +12,6 @@ export default function MaboAbility(props: IProps) {
   const maboState: maboState = useSelector((state: any) => state.mabo);
   const dispatch = useDispatch();
 
-  console.log(maboState.maboList);
   const index1 = maboState.maboList.findIndex(
     (item) => item.name === maboState.selectedChar
   );

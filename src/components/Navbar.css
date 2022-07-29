@@ -1,0 +1,30 @@
+.Navbar {
+  position: relative;
+  height: 44px;
+  border-bottom: 1px solid #B4C1C4;
+  background-color: #EADEC8;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.Navbar > .nav-wrap {
+  display: flex;
+  align-items: center;
+  max-width: 980px;
+  height: 44px;
+  margin: 0 auto;
+}
+
+.Navbar > .nav-wrap > .icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+}
+
+.Navbar > .nav-wrap > .title {
+  margin-left: 16px;
+  color: #C05A66;
+  font-size: 20px;
+  font-family: "MICEGothic";
+  font-weight: bold;
+}

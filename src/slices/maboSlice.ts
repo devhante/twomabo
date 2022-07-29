@@ -65,7 +65,7 @@ const getMaboList = (): mabo[] => {
 };
 
 const initialState: maboState = {
-  selectedChar: "Rolf",
+  selectedChar: "Vagner",
   maboList: getMaboList(),
 };
 

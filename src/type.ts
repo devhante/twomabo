@@ -170,3 +170,4 @@ export type mabo = {
   element: element;
   abilities: ability[];
 };
+export type filterName = element | "heart" | "star5" | "star4" | "star3";

@@ -31,7 +31,7 @@ export default function Character(props: IProps) {
         src={`${process.env.PUBLIC_URL}/characters/${props.character.name_en}.png`}
         alt={props.character.name_ko}
       />
-      <div className="character-info">
+      {/* <div className="character-info">
         <img
           className="character-element"
           src={`${process.env.PUBLIC_URL}/others/element_${props.character.element}.png`}
@@ -43,7 +43,7 @@ export default function Character(props: IProps) {
           alt={`star ${props.character.star}`}
         />
         <div className="character-name">{props.character.name_ko}</div>
-      </div>
+      </div> */}
     </div>
   );
 }
