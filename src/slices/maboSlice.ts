@@ -33,6 +33,14 @@ const getMaboList = (): mabo[] => {
   const data = localStorage.getItem("maboList");
   if (data) {
     result = JSON.parse(data);
+
+    // TEST CODE
+    const marina = result.find((item) => item.name === "Marina");
+    if (result !== undefined) {
+      if (marina?.element !== "fire") {
+        result = [];
+      }
+    }
   }
   for (const char of characters) {
     const obj = result.find((item) => item.name === char.name_en);
