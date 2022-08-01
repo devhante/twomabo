@@ -1,7 +1,29 @@
 .Characters {
     display: flex;
     flex-direction: column;
-    width: 80px;
+    min-width: 80px;
     padding: 0 16px 16px 16px;
     background-color: #D9D9D9;
+    overflow: scroll;
+}
+
+.Characters::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.Characters {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@media screen and (max-width: 800px) {
+    .Characters {
+        display: flex;
+        flex-direction: column;
+        min-width: 40px;
+        padding: 0 8px 8px 8px;
+        background-color: #D9D9D9;
+        overflow: scroll;
+    }
 }

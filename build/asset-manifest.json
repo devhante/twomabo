@@ -1,15 +1,23 @@
 {
   "files": {
-    "main.css": "/twomabo/static/css/main.f96e60fd.css",
-    "main.js": "/twomabo/static/js/main.0d8c1880.js",
+    "main.css": "/twomabo/static/css/main.67ea53b5.css",
+    "main.js": "/twomabo/static/js/main.5593cb66.js",
     "static/js/787.5f831a82.chunk.js": "/twomabo/static/js/787.5f831a82.chunk.js",
+    "static/media/MICEGothic.ttf": "/twomabo/static/media/MICEGothic.5a7fbc79a4a1221ac7ce.ttf",
+    "static/media/MICEGothicBold.ttf": "/twomabo/static/media/MICEGothicBold.ce471d06755dac9df9bc.ttf",
+    "static/media/MICEGothic.woff": "/twomabo/static/media/MICEGothic.c5975e74a955cca3182e.woff",
+    "static/media/MICEGothicBold.woff": "/twomabo/static/media/MICEGothicBold.92c4a5e9c8120621f4aa.woff",
+    "static/media/MICEGothic.eot": "/twomabo/static/media/MICEGothic.8c8d745491df9a6ad87d.eot",
+    "static/media/MICEGothicBold.eot": "/twomabo/static/media/MICEGothicBold.0fa01b104b5a6e83225d.eot",
+    "static/media/MICEGothic.woff2": "/twomabo/static/media/MICEGothic.d2624ff12f62445cae36.woff2",
+    "static/media/MICEGothicBold.woff2": "/twomabo/static/media/MICEGothicBold.51dc5d37f43d3968eb86.woff2",
     "index.html": "/twomabo/index.html",
-    "main.f96e60fd.css.map": "/twomabo/static/css/main.f96e60fd.css.map",
-    "main.0d8c1880.js.map": "/twomabo/static/js/main.0d8c1880.js.map",
+    "main.67ea53b5.css.map": "/twomabo/static/css/main.67ea53b5.css.map",
+    "main.5593cb66.js.map": "/twomabo/static/js/main.5593cb66.js.map",
     "787.5f831a82.chunk.js.map": "/twomabo/static/js/787.5f831a82.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f96e60fd.css",
-    "static/js/main.0d8c1880.js"
+    "static/css/main.67ea53b5.css",
+    "static/js/main.5593cb66.js"
   ]
 }

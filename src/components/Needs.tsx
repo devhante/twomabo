@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { useSelector } from "react-redux";
 import { maboState } from "../slices/maboSlice";
 import { element, itemName } from "../type";
@@ -7,6 +7,8 @@ import "./Needs.css";
 
 export default function Needs() {
   const maboState: maboState = useSelector((state: any) => state.mabo);
+
+  const [show, setShow] = useState(true);
 
   const itemCount = {
     mana: 0,
@@ -159,10 +161,24 @@ export default function Needs() {
     </>
   );
 
+  const buttonText = show ? "▼ 접기" : "▲ 펼치기";
+
+  function handleShowHideButton() {
+    setShow(!show);
+  }
+
   return (
     <div className="Needs">
-      <div className="needs-title">Needs:</div>
-      {needs}
+      <div className="show-hide-button" onClick={handleShowHideButton}>
+        {buttonText}
+      </div>
+      {show ? (
+        <div className="wrap">
+          <div className="needs-wrap">{needs}</div>
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

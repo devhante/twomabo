@@ -1,11 +1,19 @@
 .App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
   text-align: center;
 }
 
 .App > .content {
+  flex-grow: 1;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 980px;
-  min-height: calc(100vh - 88px);
+  overflow: auto;
+}
+
+.App > .content > .wrap {
+  display: flex;
+  min-height: min-content;
+  flex-basis: 980px;
+  margin: 0 auto;
 }

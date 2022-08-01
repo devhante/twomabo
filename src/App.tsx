@@ -12,10 +12,12 @@ function App() {
       <Navbar />
       <Filter />
       <div className="content">
-        {/* <Needs /> */}
-        <Characters />
-        <Mabo name="Bianca" />
+        <div className="wrap">
+          <Characters />
+          <Mabo name="Bianca" />
+        </div>
       </div>
+      <Needs />
     </div>
   );
 }

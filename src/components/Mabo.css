@@ -1,7 +1,48 @@
 .Mabo {
-    margin: 20px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ECECEC;
+    overflow: scroll;
 }
 
-.Mabo > .Mabo-abilities {
+.Mabo > .mabo-ability {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 16px 32px;
+}
+
+.Mabo > .mabo-ability > .mabo-ability-title {
+    margin-bottom: 20px;
+    font-family: 'MICEGothic';
+    font-size: 20px;
+    color: #454545;
+}
+
+.Mabo::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.Mabo {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+@media screen and (max-width: 800px) {
+    .Mabo > .mabo-ability {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 8px 8px;
+    }
+
+    .Mabo > .mabo-ability > .mabo-ability-title {
+        margin-bottom: 10px;
+        font-family: 'MICEGothic';
+        font-size: 16px;
+        color: #454545;
+    }
 }

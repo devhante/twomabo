@@ -1,6 +1,5 @@
 .Filter {
     position: relative;
-    min-height: 44px;
     background-color: #FFFFFF;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     z-index: 1000;
@@ -28,6 +27,7 @@
     border: 2px solid #FFFFFF;
     border-radius: 20px;
     background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .Filter > .filter-wrap > .icons-wrap > .icon-wrap > .icon {
@@ -43,6 +43,7 @@
     border: 2px solid #FFFFFF;
     border-radius: 20px;
     background-color: #FFFFFF;
+    cursor: pointer;
 }
 
 .Filter > .filter-wrap > .icons-wrap > .icon-wrap-star > .icon-star {

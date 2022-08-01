@@ -38,3 +38,5 @@ code {
   url('fonts/MICEGothicBold.ttf') format('truetype');
   font-weight: bold;
 }
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);

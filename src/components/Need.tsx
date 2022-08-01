@@ -15,7 +15,7 @@ export default function Need(props: IProps) {
         src={`${process.env.PUBLIC_URL}/items/${props.item}.png`}
         alt={props.item}
       />
-      <div className="need-count">{props.count}</div>
+      <div className="need-count">x{props.count}</div>
     </div>
   );
 }

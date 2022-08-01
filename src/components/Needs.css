@@ -1,11 +1,22 @@
-.Needs {
-    display: flex;
-    margin: 5px;
+.Needs > .show-hide-button {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 8px 0;
+    background-color: #EADEC8;
+    font-family: 'MICEGothic';
+    font-weight: bold;
+    color: #C05A66;
+    cursor: pointer;
 }
 
-.Needs > .needs-title {
-    padding: 0px 4px;
-    height: 56px;
-    line-height: 56px;
-    font-size: 20px;
+.Needs > .wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: #EADEC8;
+}
+
+.Needs > .wrap > .needs-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
 }

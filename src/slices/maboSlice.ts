@@ -35,30 +35,33 @@ const getMaboList = (): mabo[] => {
     result = JSON.parse(data);
   }
   for (const char of characters) {
-    result.push({
-      name: char.name_en,
-      element: char.element,
-      abilities: [
-        { number: 4, upgrade: 0, status: "unacquired" },
-        { number: 4, upgrade: 1, status: "unacquired" },
-        { number: 4, upgrade: 2, status: "unacquired" },
-        { number: 4, upgrade: 3, status: "unacquired" },
-        { number: 4, upgrade: 4, status: "unacquired" },
-        { number: 4, upgrade: 5, status: "unacquired" },
-        { number: 5, upgrade: 0, status: "unacquired" },
-        { number: 5, upgrade: 1, status: "unacquired" },
-        { number: 5, upgrade: 2, status: "unacquired" },
-        { number: 5, upgrade: 3, status: "unacquired" },
-        { number: 5, upgrade: 4, status: "unacquired" },
-        { number: 5, upgrade: 5, status: "unacquired" },
-        { number: 6, upgrade: 0, status: "unacquired" },
-        { number: 6, upgrade: 1, status: "unacquired" },
-        { number: 6, upgrade: 2, status: "unacquired" },
-        { number: 6, upgrade: 3, status: "unacquired" },
-        { number: 6, upgrade: 4, status: "unacquired" },
-        { number: 6, upgrade: 5, status: "unacquired" },
-      ],
-    });
+    const obj = result.find((item) => item.name === char.name_en);
+    if (obj === undefined) {
+      result.push({
+        name: char.name_en,
+        element: char.element,
+        abilities: [
+          { number: 4, upgrade: 0, status: "unacquired" },
+          { number: 4, upgrade: 1, status: "unacquired" },
+          { number: 4, upgrade: 2, status: "unacquired" },
+          { number: 4, upgrade: 3, status: "unacquired" },
+          { number: 4, upgrade: 4, status: "unacquired" },
+          { number: 4, upgrade: 5, status: "unacquired" },
+          { number: 5, upgrade: 0, status: "unacquired" },
+          { number: 5, upgrade: 1, status: "unacquired" },
+          { number: 5, upgrade: 2, status: "unacquired" },
+          { number: 5, upgrade: 3, status: "unacquired" },
+          { number: 5, upgrade: 4, status: "unacquired" },
+          { number: 5, upgrade: 5, status: "unacquired" },
+          { number: 6, upgrade: 0, status: "unacquired" },
+          { number: 6, upgrade: 1, status: "unacquired" },
+          { number: 6, upgrade: 2, status: "unacquired" },
+          { number: 6, upgrade: 3, status: "unacquired" },
+          { number: 6, upgrade: 4, status: "unacquired" },
+          { number: 6, upgrade: 5, status: "unacquired" },
+        ],
+      });
+    }
   }
 
   return result;
